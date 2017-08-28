@@ -12,7 +12,7 @@ Pour ce faire, le projet sera découpé en plusieurs parties.
 
 Partie 1 - Bas Niveau
 --
-
+Dossier: /Arduino
 Les rubans de led sont connectés chacun sur une sortie de l’arduino et alimentés par une alimentation externe (dont la masse est reliée à l’arduino). 
 3 rubans :
 
@@ -29,6 +29,8 @@ L’arduino n’aura qu’un rôle d’affichage.
 - Le choix de la couleur de chaque led se fait depuis le raspberry pi par une liaison série usb (penser à choisir le baud rate)
 - Allumage de toutes les led avec n° led 0 ?
 - Vérification intégrité des données ? 
+
+-Une lib et un example existe pour la gestion des rubans de led: https://randomnerdtutorials.com/guide-for-ws2812b-addressable-rgb-led-strip-with-arduino/  (l'example se trouve aussi sous  Stargate/Arduino/testLedStrip.ino )    
 
 Partie 2 - Back 
 --
