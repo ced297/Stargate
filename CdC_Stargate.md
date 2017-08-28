@@ -30,7 +30,9 @@ L’arduino n’aura qu’un rôle d’affichage.
 - Allumage de toutes les led avec n° led 0 ?
 - Vérification intégrité des données ? 
 
--Une lib et un example existe pour la gestion des rubans de led: https://randomnerdtutorials.com/guide-for-ws2812b-addressable-rgb-led-strip-with-arduino/  (l'example se trouve aussi sous  Stargate/Arduino/testLedStrip.ino )    
+- Une lib et un example existe pour la gestion des rubans de led: https://randomnerdtutorials.com/guide-for-ws2812b-addressable-rgb-led-strip-with-arduino/  (l'example se trouve aussi sous  Stargate/Arduino/testLedStrip.ino ) 
+
+- Gestion du port série sur l'arduino comment ça marche : https://zestedesavoir.com/tutoriels/686/arduino-premiers-pas-en-informatique-embarquee/744_la-communication-avec-arduino/3427_envoyer-et-recevoir-des-donnees-sur-la-voie-serie/
 
 Partie 2 - Back 
 --
