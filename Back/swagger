@@ -1,0 +1,72 @@
+swagger: "2.0"
+info:
+  description: "This is a sample server Petstore server.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters."
+  version: "1.0.0"
+  title: "Swagger Petstore"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "apiteam@swagger.io"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost:8080"
+basePath: "/stargate/v1"
+tags:
+- name: "testsequence"
+  description: "Tout pour la gestion des sequences d'activation"
+schemes:
+- "http"
+paths:
+  /testsequence/AllumeBandeau:
+    post:
+      tags:
+      - "testsequence"
+      summary: "Allume toutes les led d'un bandeau d'une couleur "
+      description: ""
+      operationId: "allumerLedBandeau"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "numero du bandeau et couleur pour l'alumage"
+        required: true
+        schema:
+          $ref: "#/definitions/TestSequence"
+      responses:
+        405:
+          description: "Invalid input"
+  /testsequence/Eteindre:
+    post:
+      tags:
+      - "testsequence"
+      summary: "Eteint toutes les led de tous les bandeaux"
+      description: ""
+      operationId: "eteindre"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        default:
+          description: "successful operation"
+definitions:
+  TestSequence:
+    type: "object"
+    properties:
+      idBandeau:
+        type: "integer"
+        format: "int64"
+      niveauRouge:
+        type: "integer"
+        format: "int64"
+      niveauBleu:
+        type: "integer"
+        format: "int32"
+      niveauVert:
+        type: "integer"
+        format: "int32"
+    xml:
+      name: "TestSequence"
