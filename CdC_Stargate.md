@@ -55,6 +55,16 @@ Dans le cadre de la mise en application de formations le front sera fait en angu
 - Création de séquences ou ambiances avec enregistrement. Possiblement 1 partie (chevrons/symbole/vortex) à la fois puis mixage.
 - Ajout effet sonore à l’appui des symboles lors de la composition « live » de la séquence d’activation.
 
+IHM 1 :
+la première IHM:
+  - une liste déroulante pour choisir le ruban de led que l'on veux utiliser (il y en a 3 : chevrons/glyphes/central) =>alimentée par (get) /stargate/bandeau/
+  - une liste déroulante pour choisir la led à traiter (ou toutes) => alimentée par (get) /stargate/bandeau/<n°du bandeau>
+  - 3 barres de sélections pour la couleur (RVB) => alimentée soit par (get) /stargate/bandeau/<n°du bandeau>/led/<n°led> soit toutes les valeurs à 0 si "toutes" est sélectionné dans la liste de leds
+  - (optionnel) un bouton de raz des couleur
+  - un bouton d'envoi => fait soit:
+     * un (Post) /stargate/bandeau/<n°du bandeau> {R=[0-255],V=[0-255],B=[0-255]} si "toutes" est sélectionné dans la liste de leds
+     * un (Post) /stargate/bandeau/<n°du bandeau>/led/<n°led> {R=[0-255],V=[0-255],B=[0-255]} si une led est sélectionné dans la liste de leds
+
 Exemple de DHD :
 
 ![DHD](https://i.imgur.com/kqxS8XB.png "DHD")
