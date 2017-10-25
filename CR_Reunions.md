@@ -1,3 +1,24 @@
+
+-----------
+25/10/2017
+ODJ : Mise en place environnements dont le socle Angular SII 
+--
+
+1) installation du PC sii (ca a pris pas mal de temps au final)
+2) socle angular SII avec tous les trucs qui vont avec (npm ...)
+3) lancement du front => tout est OK
+4) dépot sur git (https://github.com/N3mo4Br3st/stargate-front)
+5) on a aussi posé les bases de l'archi et notamment la première IHM:
+  - une liste déroulante pour choisir le ruban de led que l'on veux utiliser (il y en a 3 : chevrons/glyphes/central) =>alimentée par (get) /stargate/bandeau/
+  - une liste déroulante pour choisir la led à traiter (ou toutes) => alimentée par (get) /stargate/bandeau/<n°du bandeau>
+  - 3 barres de sélections pour la couleur (RVB) => alimentée soit par (get) /stargate/bandeau/<n°du bandeau>/led/<n°led> soit toutes les valeurs à 0 si "toutes" est sélectionné dans la liste de leds
+  - (optionnel) un bouton de raz des couleur
+  - un bouton d'envoi => fait soit:
+     * un (Post) /stargate/bandeau/<n°du bandeau> {R=[0-255],V=[0-255],B=[0-255]} si "toutes" est sélectionné dans la liste de leds
+     * un (Post) /stargate/bandeau/<n°du bandeau>/led/<n°led> {R=[0-255],V=[0-255],B=[0-255]} si une led est sélectionné dans la liste de leds
+
+les noms ne sont pas encore définitif
+
 -----------
 11/10/2017
 ODJ : Préparation du back et ébauche de définition des Api:
