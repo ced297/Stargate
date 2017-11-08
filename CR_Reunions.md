@@ -1,5 +1,20 @@
 
 -----------
+08/11/2017
+ODJ : Definition IHM et interfaces
+--
+
+1) Définition des différents Lots:
+  - LOT1 : IHM simple qui permet d'allumer/éteindre les leds choisies d'un dans l couleur.
+  - LOT2 : IHM style DHD pour activer des séquences.
+  - LOT3 : IHM de programmation de séquence et d'hambiances.
+  - LOT suivants : Rendre tout ça encore plus sexy et y ajouter d'autres fonctionnalitées.
+2) Revue de l'IHM du LOT 1: 
+cf: IHM_LOT1
+
+3) Revue du swagger avec définition des ressurces et url d'accès: cf swagger
+
+-----------
 25/10/2017
 ODJ : Mise en place environnements dont le socle Angular SII 
 --
