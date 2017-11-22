@@ -1,5 +1,18 @@
 
 -----------
+22/11/2017
+ODJ : Debut dev front et back
+--
+
+Front:
+1) Pc Angular SII hs: impossible de démarrer le PC fix prévu pour faire de l'Angular 
+2) Exploration du code généré par swagger-editor
+Back:
+1) Utilisation de swagger-editor
+2) Génération du code serveur
+3) Exploration du code généré
+
+-----------
 08/11/2017
 ODJ : Definition IHM et interfaces
 --
