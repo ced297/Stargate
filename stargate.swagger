@@ -13,7 +13,7 @@ basePath: "/stargate/v1"
 schemes:
 - "http"
 paths:
-  /bandeau:
+  /bandeaux:
     get:
       tags:
       - "bandeaux"
@@ -32,10 +32,10 @@ paths:
               $ref: "#/definitions/Bandeau"
         404:
           description: "Bandeaux not found"
-  /bandeau/{bandeauId}:
+  /bandeaux/{bandeauId}:
     get:
       tags:
-       - "bandeau"
+       - "bandeaux"
       summary: "recupère un bandeau par son ID"
       description: "Retourne un bandeau"
       operationId: "getBandeauById"
@@ -58,7 +58,7 @@ paths:
           description: "Invalid ID supplied"
         404:
           description: "Bandeau not found"
-  /bandeau/{bandeauId}/led:
+  /bandeaux/{bandeauId}/leds:
     get:
       tags:
       - "leds"
@@ -86,9 +86,9 @@ paths:
           description: "Invalid ID supplied"
         404:
           description: "Leds not found"
-    post:
+    put:
       tags:
-      - "led"
+      - "leds"
       summary: "Met à jour l'état de toutes les leds du bandeau"
       description: ""
       operationId: "updateLeds"
@@ -125,10 +125,10 @@ paths:
       responses:
         405:
           description: "Invalid input"
-  /bandeau/{bandeauId}/led/{ledId}:
+  /bandeaux/{bandeauId}/leds/{ledId}:
     get:
       tags:
-      - "led"
+      - "leds"
       summary: "recupère une led d'un bandeau par son ID"
       description: "Retourne un bandeau"
       operationId: "getLedById"
@@ -157,9 +157,9 @@ paths:
           description: "Invalid ID supplied"
         404:
           description: "Pet not found"
-    post:
+    put:
       tags:
-      - "led"
+      - "leds"
       summary: "Met à jour l'état de la led"
       description: ""
       operationId: "updateLed"
@@ -179,10 +179,10 @@ paths:
       responses:
         405:
           description: "Invalid input"
-  /bandeau/Eteindre:
-    post:
+  /reset/bandeaux:
+    put:
       tags:
-      - "eteindre"
+      - "reset"
       summary: "Eteint toutes les led de tous les bandeaux"
       description: ""
       operationId: "eteindre"
@@ -220,6 +220,9 @@ definitions:
     - "id"
     properties:
       id:
+        type: "integer"
+        format: "int32"
+      groupe:
         type: "integer"
         format: "int32"
       niveauRouge:
