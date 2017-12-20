@@ -1,3 +1,15 @@
+-----------
+20/12/2017
+ODJ : Debut dev front
+--
+
+Front:
+1) Mise en place de bootstrap et plugin git
+2) Structuration du projet Front
+3) Recherche et création de composants bootstrap
+4) Définition du service "Ruban" avec le modèle et mock du service 
+5) Création d'une liste déroulante chargée avec les "Rubans" 
+6) Application de CSS Bootstrap
 
 -----------
 22/11/2017
