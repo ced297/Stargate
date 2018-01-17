@@ -1,4 +1,18 @@
 -----------
+17/01/2018
+ODJ : Dev front et back
+--
+
+Front:
+1) Presentation du projet au petit nouveau qui nous a rejoint
+2) Mise en place de l'environnement de dev sur le poste à Daniel
+3) Création d'une liste déroulante chargée avec les "led" (en cours de dev) 
+
+Back:
+1) Modification du swagger pour compléter l'interface
+2) Génération et organisation du back
+
+-----------
 20/12/2017
 ODJ : Debut dev front
 --
