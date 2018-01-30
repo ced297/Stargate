@@ -59,7 +59,7 @@ paths:
         404:
           description: "Porte not found"
           
-  /bandeaux:
+  /portes/{porteId}/bandeaux:
     get:
       tags:
       - "bandeaux"
@@ -69,6 +69,13 @@ paths:
       produces:
       - "application/xml"
       - "application/json"
+      parameters:
+      - name: "porteId"
+        in: "path"
+        description: "ID de la porte à retourner"
+        required: true
+        type: "integer"
+        format: "int32"
       responses:
         200:
           description: "successful operation"
@@ -78,7 +85,7 @@ paths:
               $ref: "#/definitions/Bandeau"
         404:
           description: "Bandeaux not found"
-  /bandeaux/{bandeauId}:
+  /portes/{porteId}/bandeaux/{bandeauId}:
     get:
       tags:
        - "bandeaux"
@@ -95,6 +102,12 @@ paths:
         required: true
         type: "integer"
         format: "int32"
+      - name: "porteId"
+        in: "path"
+        description: "ID de la porte à retourner"
+        required: true
+        type: "integer"
+        format: "int32"
       responses:
         200:
           description: "successful operation"
@@ -104,7 +117,7 @@ paths:
           description: "Invalid ID supplied"
         404:
           description: "Bandeau not found"
-  /bandeaux/{bandeauId}/leds:
+  /portes/{porteId}/bandeaux/{bandeauId}/leds:
     get:
       tags:
       - "leds"
@@ -121,6 +134,12 @@ paths:
         required: true
         type: "integer"
         format: "int32"
+      - name: "porteId"
+        in: "path"
+        description: "ID de la porte à retourner"
+        required: true
+        type: "integer"
+        format: "int32"  
       responses:
         200:
           description: "successful operation"
@@ -150,6 +169,12 @@ paths:
         required: true
         type: "integer"
         format: "int32"
+      - name: "porteId"
+        in: "path"
+        description: "ID de la porte à retourner"
+        required: true
+        type: "integer"
+        format: "int32"
       - name: "niveauRouge"
         in: "formData"
         type: "integer"
@@ -172,7 +197,7 @@ paths:
         405:
           description: "Invalid input"
           
-  /bandeaux/{bandeauId}/leds/{ledId}:
+  /portes/{porteId}/bandeaux/{bandeauId}/leds/{ledId}:
     get:
       tags:
       - "leds"
@@ -195,6 +220,12 @@ paths:
         required: true
         type: "integer"
         format: "int32"
+      - name: "porteId"
+        in: "path"
+        description: "ID de la porte à retourner"
+        required: true
+        type: "integer"
+        format: "int32"  
       responses:
         200:
           description: "successful operation"
@@ -229,6 +260,12 @@ paths:
         required: true
         type: "integer"
         format: "int32"
+      - name: "porteId"
+        in: "path"
+        description: "ID de la porte à retourner"
+        required: true
+        type: "integer"
+        format: "int32"
       - in: "body"
         name: "body"
         description: "Led à mettre à jour"
@@ -238,7 +275,7 @@ paths:
       responses:
         405:
           description: "Invalid input"
-  /reset/bandeaux:
+  /reset/portes/{porteId}/bandeaux:
     put:
       tags:
       - "reset"
@@ -248,7 +285,13 @@ paths:
       produces:
       - "application/xml"
       - "application/json"
-      parameters: []
+      parameters:
+      - name: "porteId"
+        in: "path"
+        description: "ID de la porte à retourner"
+        required: true
+        type: "integer"
+        format: "int32"
       responses:
         default:
           description: "successful operation"
